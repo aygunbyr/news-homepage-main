@@ -1,0 +1,22 @@
+/* reset css */
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
