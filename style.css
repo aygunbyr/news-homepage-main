@@ -196,6 +196,10 @@ section#news-bottom {
   }
 }
 
+.overlay {
+  display: block;
+}
+
 @media (max-width: 500px) {
   .featured-new-description {
     margin-top: 12px;
@@ -224,6 +228,7 @@ section#news-bottom {
 
   .hamburger-menu-wrapper {
     display: flex;
+    justify-content: flex-end;
     opacity: 0;
     position: absolute;
     top: 0;
@@ -231,6 +236,7 @@ section#news-bottom {
     right: 0;
     left: 100%;
     transition: left 250ms ease, opacity 250ms ease;
+    z-index: 999;
   }
 
   .open {
@@ -239,13 +245,24 @@ section#news-bottom {
   }
 
   .overlay {
-    flex: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 100%;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .overlay.open {
+    left: 0;
   }
 
   .mobile-nav-wrapper {
     background-color: var(--white);
-    flex: 3;
+    width: 75%;
+    height: 100%;
   }
 
   .mobile-nav {
